@@ -1,5 +1,6 @@
 import AddEmployee from "./AddEmployee";
 import EmpList from "./EmpList";
+
 const Employee = () => {
 
     return (
