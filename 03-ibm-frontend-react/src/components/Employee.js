@@ -3,11 +3,21 @@ import EmpList from "./EmpList";
 const Employee = () => {
 
     return (
-        <>
+        <div className="container">
             <h1>Employee Component</h1>
+            <div className="border col-4 mx-3 my-3 px-2 py-3">
+                <p className="lead">Create these functionalties: </p>
+                <p>View All Employees</p>
+                <p>Find Employee by Name</p>
+                <p>Add New Employee</p>
+                <p>Update Employee</p>
+                <p>Delete Employee</p>
+                <p>(Modify springboot code, if needed)</p>
+            </div>
+
             <AddEmployee />
             <EmpList />
-        </>
+        </div>
     );
 };
 
