@@ -15,7 +15,6 @@ const UserService = {
             return response.data;
         } catch (error) {
             console.log(error);
-            // return error;
             throw new Error(error);
         }
     },

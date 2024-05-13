@@ -127,7 +127,7 @@ export default App;
 
 // function App() {
 //   return (
-//     <div class="App">
+//     <div className="App">
 //       <p>IBM React Demo App</p>
 //     </div>
 //   );
