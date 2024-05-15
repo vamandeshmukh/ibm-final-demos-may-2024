@@ -23,7 +23,7 @@ import com.ibm.springboot.demo.service.EmployeeService;
 
 @RestController
 @RequestMapping("emp")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class EmployeeController {
 
 	@Autowired
