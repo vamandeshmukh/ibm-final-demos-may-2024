@@ -3,19 +3,20 @@
 import User from '../models/user.model.js';
 
 const registerUser = async (userData) => {
-    console.log('service', userData);
+    console.log('service - registerUser');
+    console.log(userData);
     try {
         const user = new User(userData);
         await user.save(); // 
         return user;
     } catch (error) {
-        console.log(error);
+        console.error(error);
         throw new Error(error);
     }
 };
 
 const loginUser = async (credentials) => {
-    console.log('service');
+    console.log('service - loginUser');
     console.log(credentials);
     const { username, password } = credentials;
     try {
@@ -24,12 +25,13 @@ const loginUser = async (credentials) => {
             throw new Error('Invalid username or password');
         return user;
     } catch (error) {
+        console.error(error);
         throw new Error(error);
     }
 };
 
 const updateUserProfile = async (userId, updatedData) => {
-    console.log('service');
+    console.log('service - updateUserProfile');
     console.log(updatedData);
     console.log(userId);
     try {
@@ -48,5 +50,6 @@ const updateUserProfile = async (userId, updatedData) => {
 const userService = { registerUser, loginUser, updateUserProfile };
 
 export default userService;
+
 
 
