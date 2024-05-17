@@ -1,6 +1,19 @@
+import { useEffect } from "react";
 import AppRoutes from "./components/common/AppRoutes";
+import { useDispatch } from "react-redux";
+import { userLogin } from "./redux/UserSlice";
 
 const App = () => {
+const dispatch = useDispatch();
+  useEffect(() => {
+    console.log('useEffect');
+    const token = localStorage.getItem('jwtToken');
+    console.log(token);
+    if (token) {
+        console.log(token);
+        dispatch(userLogin({}));
+    }
+}, []);
 
   return (
     <>

@@ -20,6 +20,8 @@ const UserSlice = createSlice({
             state.loggedInUser = action.payload.user;
             state.jwtToken = action.payload.token;
             state.loginStatus = true;
+            sessionStorage.setItem('jwtToken', action.payload.token);
+            console.log(sessionStorage.getItem('jwtToken'));
         },
         userUpdateProfile: (state, action) => {
             console.log(action.payload);
@@ -31,6 +33,9 @@ const UserSlice = createSlice({
             console.log(action.payload);
             state.loggedInUser = '';
             state.loginStatus = false;
+            console.log(sessionStorage.getItem('jwtToken'));
+            sessionStorage.removeItem('jwtToken');
+            console.log(sessionStorage.getItem('jwtToken'));
         }
     }
 });

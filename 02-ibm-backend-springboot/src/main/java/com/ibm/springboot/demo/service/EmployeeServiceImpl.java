@@ -67,7 +67,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public Employee updateEmployee(Employee employee) {
 		LOG.info(employee.toString());
-		this.getEmployeeById(employee.getEmployeeId());
+		Employee emp = this.getEmployeeById(employee.getEmployeeId());
 		return employeeRepository.save(employee);
 	}
 
