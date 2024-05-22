@@ -1,0 +1,33 @@
+<div>
+    <h1>Employee Component</h1>
+    <hr />
+    <h4>Get Employee by Id</h4>
+    <form (submit)="getEmpById()">
+        <input type="text" id="employeeId" name="employeeId" [(ngModel)]="employeeId" placeholder="Enter employee id"
+            required>
+        <br />
+        <input type="submit" value="Get Employee By Id">
+    </form>
+    <div *ngIf="empData">
+        <p>EmployeeId: {{empData?.employeeId }}</p>
+        <p>FirstName: {{empData?.firstName }}</p>
+        <p>Phone: {{empData?.phone}}</p>
+        <p>Email: {{empData?.email}}</p>
+        <p>Aadhaar: {{empData?.aadhaar}}</p>
+        <p>Salary: {{empData?.salary}}</p>
+    </div>
+    <hr />
+    <h4>Get All Employees</h4>
+    <h4>Get All Employees</h4>
+    <h4>Get All Employees</h4>
+    <h4>Get All Employees</h4>
+    <button (click)="getAllEmps()">Get All Employees</button>
+    <div *ngIf="empList">
+        <div *ngFor="let emp of empList">
+            <p>EmployeeId: {{emp?.employeeId }} FirstName: {{emp?.firstName}} Phone: {{emp?.phone}} Email: {{emp?.email}} Aadhaar: {{emp?.aadhaar}}
+                Salary: {{emp?.salary}}</p>
+        </div>
+    </div>
+
+
+</div>

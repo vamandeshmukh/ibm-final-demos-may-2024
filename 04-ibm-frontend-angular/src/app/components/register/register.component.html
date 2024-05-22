@@ -1,0 +1,35 @@
+<div>
+    <h1>Register Component</h1>
+    <p>Register Component with <a href="https://angular.io/guide/forms" target="_blank">Template Driven Form in
+            Angular</a> </p>
+    <div>
+        <form #registerForm="ngForm" (ngSubmit)="submitRegister(registerForm)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" [(ngModel)]="registerData.username" required
+                placeholder="Enter your username" />
+            <br />
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" [(ngModel)]="registerData.password" required
+                placeholder="Enter your password" />
+            <br />
+            <input type="submit" value="Register" />
+        </form>
+        <p *ngIf="postRegisterMessage">{{ postRegisterMessage }}</p>
+    </div>
+</div>
+
+
+<!-- <div>
+    <h1>Register Component</h1>
+    <div>
+        <p>Register here to continue...</p>
+        <form>
+            <input type="text" name="username" [(ngModel)]="registerData.username" />
+            <br />
+            <input type="password" name="password" [(ngModel)]="registerData.password" />
+            <br />
+            <input type="button" (click)="submitRegister()" value="Register" />
+        </form>
+        <p>{{postRegisterMessage}}</p>
+    </div>
+</div> -->

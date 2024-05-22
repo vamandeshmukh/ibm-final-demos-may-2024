@@ -1,0 +1,66 @@
+<h1>Profile Component</h1>
+
+<div *ngIf="profileData">
+    <hr />
+    <div style="display: flex; margin-left: 5%; margin-right: 5%;">
+        <div style="flex: 1;">
+            <h1>User Profile</h1>
+            <p>Username: {{profileData.username}}</p>
+            <p>First Name: {{profileData.firstName}}</p>
+            <p>Last Name: {{profileData.lastName}}</p>
+            <p>Email: <a href="mailto:{{profileData.email}}">{{profileData.email}}</a></p>
+            <p>Phone: {{profileData.phone}}</p>
+            <p>Aadhaar: {{profileData.aadhaar}}</p>
+        </div>
+        <div style="flex: 1;">
+            <img height="300px" [src]="profileData.avatar" [alt]="profileData.firstName">
+        </div>
+    </div>
+    <hr />
+</div>
+
+<div *ngIf="!profileData">
+    <p>Data is loading...</p>
+</div>
+
+<div>
+    <!-- <app-edit-profile></app-edit-profile> -->
+</div>
+
+
+<!-- <app-edit-profile></app-edit-profile>
+
+<hr />
+<div style="display: flex; margin-left: 5%; margin-right: 5%;">
+    <div style="flex: 1;">
+        <h1>User Profile</h1>
+        <p>First Name: {{profileData.firstName}}</p>
+        <p>Last Name: {{profileData.lastName}}</p>
+        <p>Email: <a href="mailto:{{profileData.email}}">{{profileData.email}}</a></p>
+        <p>Aadhaar: {{profileData.aadhaar}}</p>
+        <p>Salary: {{profileData.salary}}</p>
+        <p>Phones: {{profileData.phones[0]}}, {{profileData.phones[1]}}</p>
+    </div>
+    <div style="flex: 1;">
+        <img [src]="profileData.avatar" [alt]="profileData.firstName">
+    </div>
+</div>
+<hr />
+
+<div>
+    <h1>Update Profile</h1>
+    <label>First Name: </label>
+    <input type="text" [(ngModel)]="tempData.firstName">
+    <p> Other fields </p>
+    <input type="button" (click)="setProfileData()" value="Update">
+</div>
+<hr />
+
+<div>
+    <h3>Assignment</h3>
+    <h5>Basic</h5>
+    <p>Create your profile here including - first name, last name, phones, email, aadhaar, salary, avatar etc </p>
+    <h5>Medium</h5>
+    <p>Create functionalities to edit the profile. </p>
+
+</div> -->
