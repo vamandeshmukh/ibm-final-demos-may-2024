@@ -23,7 +23,7 @@ FROM nginx:alpine
 COPY --from=0 /app/dist/04-ibm-frontend-angular /usr/share/nginx/html
 
 # Expose port 
-EXPOSE 4300
+EXPOSE 4200
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
