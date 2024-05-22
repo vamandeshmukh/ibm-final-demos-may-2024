@@ -20,8 +20,11 @@ RUN npm run build --prod
 FROM nginx:alpine
 
 # Copy the build output to the Nginx HTML directory
-COPY --from=0 /app/dist/04-ibm-frontend-angular /usr/share/nginx/html
+# COPY --from=0 /app/dist/04-ibm-frontend-angular /usr/share/nginx/html
+# COPY --from=0 /app/dist . /usr/share/nginx/html
+COPY --from=0 /app/dist /usr/share/nginx/html
 
+ 
 # Expose port 
 EXPOSE 4200
 
