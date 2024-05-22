@@ -1,0 +1,12 @@
+{
+  "routes": [
+    "/",
+    "/edit",
+    "/emp",
+    "/life",
+    "/login",
+    "/logout",
+    "/profile",
+    "/register"
+  ]
+}
