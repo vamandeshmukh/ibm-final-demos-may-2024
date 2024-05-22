@@ -24,7 +24,6 @@ FROM nginx:alpine
 # COPY --from=0 /app/dist . /usr/share/nginx/html
 COPY --from=0 /app/dist /usr/share/nginx/html
 
- 
 # Expose port 
 EXPOSE 4200
 
