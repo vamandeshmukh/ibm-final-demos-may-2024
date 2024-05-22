@@ -1,5 +1,5 @@
 # Use the official Node.js image as the base image
-FROM node:20
+FROM node:18-alpine
 
 # Set the working directory
 WORKDIR /app
@@ -23,9 +23,6 @@ FROM nginx:alpine
 
 # Copy the build output to the Nginx HTML directory
 COPY --from=0 /app/dist/04-ibm-frontend-angular/browser /usr/share/nginx/html
-# COPY --from=0 /app/dist/04-ibm-frontend-angular /usr/share/nginx/html
-# COPY --from=0 /app/dist . /usr/share/nginx/html
-# COPY --from=0 /app/dist /usr/share/nginx/html
 
 # Expose port 
 EXPOSE 4200
