@@ -17,3 +17,34 @@ spec:
           image: vamandeshmukh/04-ibm-frontend-angular:latest
           ports:
             - containerPort: 80
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: ibm-frontend-angular
+# spec:
+#   replicas: 2
+#   selector:
+#     matchLabels:
+#       app: ibm-frontend-angular
+#   template:
+#     metadata:
+#       labels:
+#         app: ibm-frontend-angular
+#     spec:
+#       containers:
+#         - name: ibm-frontend-angular
+#           image: 04-ibm-frontend-angular
+#           ports:
+#             - containerPort: 80
+#           livenessProbe:
+#             httpGet:
+#               path: /health
+#               port: 80
+#             initialDelaySeconds: 30
+#             periodSeconds: 10
+#           readinessProbe:
+#             httpGet:
+#               path: /ready
+#               port: 80
+#             initialDelaySeconds: 30
+#             periodSeconds: 10
