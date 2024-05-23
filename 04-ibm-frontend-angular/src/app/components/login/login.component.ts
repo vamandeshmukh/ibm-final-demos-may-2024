@@ -20,6 +20,7 @@ export class LoginComponent {
   postLoginMessage: string = '';
 
   constructor(private fb: FormBuilder, private userService: UserService, private authService: AuthService, private router: Router) {
+    console.log('login constructor');
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -27,6 +28,7 @@ export class LoginComponent {
   }
 
   submitLogin() {
+    console.log('submitLogin');
     if (this.loginForm.valid) {
       const loginData = this.loginForm.value;
       this.userService.login(loginData)
@@ -52,7 +54,6 @@ export class LoginComponent {
     }
   }
 }
-
 
 // import { Component } from '@angular/core';
 // import { FormsModule } from '@angular/forms';
